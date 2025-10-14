@@ -27,7 +27,7 @@ function Error() {
     return (
         <>
             <h1 style={estiloTitulo}>
-                Error 404 - Página no encontrada
+                Página no encontrada
             </h1>
 
             <div style={estiloImagen}>
