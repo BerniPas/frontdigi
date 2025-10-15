@@ -8,6 +8,7 @@ import Testimonios from './Pages/Testimonios';
 import Error from './Pages/Error';  
 import Formulario from './Pages/Formulario';
 import Login from './Pages/Login';
+import Personajes from './Pages/Personajes';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/testimonios' element={<Testimonios />} />
         <Route path='/formulario' element={<Formulario />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/personajes' element={<Personajes />} />
         <Route path='/*' element={<Error />} />
       </Routes>
   
