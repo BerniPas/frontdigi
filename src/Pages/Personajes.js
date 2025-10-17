@@ -27,7 +27,7 @@ const Personajes = () => {
             .then(res => {
                 /* imprimo en consola la variable que contiene los personajes */
                 console.log(res.data.results);
-                setPersonajes(res.data.results);
+                setPersonajes(res.data.results); 
 
             });
     }, []);
