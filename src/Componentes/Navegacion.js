@@ -16,6 +16,7 @@ const Navegacion = () => {
                 {/* <NavLink to="/formulario">Formulario</NavLink> */}
                 <NavLink to="/login">Login</NavLink>
                 <NavLink to="/personajes">Personajes</NavLink>
+                <NavLink to="/productos">Productos</NavLink>
             </div>
 
             <span className="icon-menu" onClick="abrir();"></span>

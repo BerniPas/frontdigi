@@ -1,6 +1,7 @@
 import imagenUno from '../assets/img1.png'
 import imagenDos from '../assets/img2.png'
 import imagenTres from '../assets/img3.png'
+import data from '../data/data.json'
 
 import { Link } from 'react-router-dom'
 
@@ -32,8 +33,9 @@ const Home = () => {
                 </div>
                 <div className="cuarenta">
                     <h2>Diseño de Marca e Imagen</h2>
-                    <p>Comúnmente utilizado en la industria gráfica, de impresión y publicación.
-                    </p></div>
+                    <p>{data.nosotros.mision}</p>
+                    <p>{data.nosotros.vision}</p>
+                </div>
             </section>
             <section>
                 <div className="cuarenta">

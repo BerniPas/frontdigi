@@ -1,19 +1,17 @@
-
-// import de los hooks de react
 import { useState, useEffect } from 'react';
 
 // import de axios: para uso de API REST o peticiones HTTP
 import axios from 'axios';
 
 // componente hijo al que le pasaremos los datos y nos devolverá la card
-import PersonajeCard from '../Componentes/PersonajeCard';
+import ProductosCard from '../Componentes/ProductosCard';
 import data from '../data/data.json';
 
 
-const Personajes = () => {
+const Productos = () => {
 
-    // estado para guardar los personajes
-    const [personajes, setPersonajes] = useState([]);
+    // estado para guardar los productos
+    const [productos, setProductos] = useState([]);
 
 
     /*     let personajes = []; //js nativo
@@ -22,12 +20,12 @@ const Personajes = () => {
 
     // useEffect para cargar los personajes al montar el componente
     useEffect(() => {
-        // llamada a la API de Rick and Morty con axios
-        axios.get('https://rickandmortyapi.com/api/character')
+        // llamada a la API de productos con axios
+        axios.get('https://dummyjson.com/products')
             .then(res => {
-                /* imprimo en consola la variable que contiene los personajes */
-                console.log(res.data.results);
-                setPersonajes(res.data.results);
+                /* imprimo en consola la variable que contiene los productos */
+                console.log(res.data.products);
+                setProductos(res.data.products);
 
             });
     }, []);
@@ -52,9 +50,9 @@ const Personajes = () => {
 
             {/* Llamamos al componente PersonajeCard */}
             <div style={estilos}>
-                {personajes.map(personajes => (
-                    <div key={personajes.id}>
-                        <PersonajeCard personajes={personajes} />
+                {productos.map(producto => (
+                    <div key={producto.id}>
+                        <ProductosCard productos={producto} />
                     </div>
                 ))}
             </div>
@@ -62,4 +60,4 @@ const Personajes = () => {
     )
 }
 
-export default Personajes
+export default Productos

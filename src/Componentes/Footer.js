@@ -1,4 +1,4 @@
-
+import data from '../data/data.json';
 
 
 
@@ -8,7 +8,9 @@ const Footer = () => {
             <footer>
                 <ul>
                     <li>Redes</li>
-                    <li>LinkedIn</li>
+                    <li>
+                        <a href={data.redes_sociales.linkedin} target='_blank' rel="noopener noreferrer">LinkedIn</a>
+                    </li>
                     <li>Facebook</li>
                     <li>Instragram</li>
                     <li>Twitter</li>

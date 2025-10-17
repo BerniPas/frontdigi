@@ -4,14 +4,17 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function PersonajeCard({personajes}) {
+function ProductosCard({productos}) {
     return (
         <Card style={{ width: '20rem' }}>
-            <Card.Img variant="top" src={personajes.image} />
+            <Card.Img variant="top" src={productos.thumbnail} />
             <Card.Body>
-                <Card.Title>{personajes.name}</Card.Title>
+                <Card.Title>{productos.title}</Card.Title>
                 <Card.Text className='text-center'>
-                    {personajes.gender} - {personajes.species}
+                    {productos.description}
+                </Card.Text>
+                <Card.Text className='text-center'>
+                    {productos.price}
                 </Card.Text>
                 <Button variant="primary">Comprar</Button>
             </Card.Body>
@@ -19,4 +22,4 @@ function PersonajeCard({personajes}) {
     );
 }
 
-export default PersonajeCard;
+export default ProductosCard;
