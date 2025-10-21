@@ -15,6 +15,11 @@ const Personajes = () => {
     // estado para guardar los personajes
     const [personajes, setPersonajes] = useState([]);
 
+    //TRAER LA URL DE LA API DESDE EL ENV
+    const API_PERSONAJES = process.env.REACT_APP_API_PERSONAJES;
+
+    console.log(process.env);
+    console.log(API_PERSONAJES);
 
     /*     let personajes = []; //js nativo
         personajes.push({nombre: 'Morty'});
@@ -23,7 +28,7 @@ const Personajes = () => {
     // useEffect para cargar los personajes al montar el componente
     useEffect(() => {
         // llamada a la API de Rick and Morty con axios
-        axios.get('https://rickandmortyapi.com/api/character')
+        axios.get(`${API_PERSONAJES}`)
             .then(res => {
                 /* imprimo en consola la variable que contiene los personajes */
                 console.log(res.data.results);

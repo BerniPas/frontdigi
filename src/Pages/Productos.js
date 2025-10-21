@@ -13,6 +13,9 @@ const Productos = () => {
     // estado para guardar los productos
     const [productos, setProductos] = useState([]);
 
+    //TRAER LA URL DE LA API DESDE EL ENV
+    const API_PRODUCTOS = process.env.REACT_APP_API_PRODUCTOS;
+
 
     /*     let personajes = []; //js nativo
         personajes.push({nombre: 'Morty'});
@@ -21,7 +24,7 @@ const Productos = () => {
     // useEffect para cargar los personajes al montar el componente
     useEffect(() => {
         // llamada a la API de productos con axios
-        axios.get('https://dummyjson.com/products')
+        axios.get(`${API_PRODUCTOS}`)
             .then(res => {
                 /* imprimo en consola la variable que contiene los productos */
                 console.log(res.data.products);
