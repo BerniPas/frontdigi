@@ -10,6 +10,7 @@ import Formulario from './Pages/Formulario';
 import Login from './Pages/Login';
 import Personajes from './Pages/Personajes';
 import Productos from './Pages/Productos';
+import ProductosLocal from './Pages/ProductosLocal';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/personajes' element={<Personajes />} />
         <Route path='/productos' element={<Productos />} />
+        <Route path='/productos-local' element={<ProductosLocal />} />
         <Route path='/*' element={<Error />} />
       </Routes>
   

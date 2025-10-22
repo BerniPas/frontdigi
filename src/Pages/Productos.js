@@ -6,6 +6,7 @@ import axios from 'axios';
 // componente hijo al que le pasaremos los datos y nos devolverá la card
 import ProductosCard from '../Componentes/ProductosCard';
 import data from '../data/data.json';
+import producto from '../data/productos.json';
 
 
 const Productos = () => {
